@@ -59,7 +59,7 @@ $(document).click(function() {
     if (people == 0) {
         $(".input-container-people").css("box-shadow", "0 0 0 2px red");
     } else {
-        $(".input-container-people").css("box-shadow", "none");
+        $(".input-container-people").css("box-shadow", "");
 
     }
 
