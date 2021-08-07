@@ -111,7 +111,7 @@ input[type="number"] {
     font-size: 24px; font-family: var(--space-mono); font-weight: bold;
 }
 
-input[type="number"]:hover {
+input[type="number"]:hover, .input-container:hover {
     cursor: pointer;
     background-color: var(--light-grayish-cyan-2);
 }
@@ -124,8 +124,6 @@ input[type="number"]:hover {
 
 .input-container:hover {
     box-shadow: 0 0 0 2px var(--strong-cyan);
-    cursor: pointer;
-    background-color: var(--light-grayish-cyan-2);
 }
 
 .tip-percent-container {
