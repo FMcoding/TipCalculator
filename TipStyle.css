@@ -75,11 +75,18 @@ main {
 
 .input-container {
     margin-top: 0.5rem;
-    width: 95%;
+    margin-bottom: 0;
+    width: 95%; 
     background-color: var(--light-grayish-cyan);
     border-radius: 5px;
     padding-left: 0.5rem;
+    display: flex; align-items: center;
 }
+
+.input-container-people {
+    margin-top: -5px;
+}
+
 
 .select-container {
     height: 8rem;
@@ -89,6 +96,17 @@ main {
 .num-people-container {
     height: 4rem;
     padding-left: 0.5rem;
+}
+
+.labels-zero {
+    display: flex; flex-direction: row; justify-content: space-between; 
+}
+
+#zero {
+    margin-top: 0;
+    font-family: var(--space-mono); font-weight: bold;
+    color: hsl(0, 70%, 50%);
+    visibility: hidden;
 }
 
 label {
@@ -244,4 +262,76 @@ input[type="number"]:hover, .input-container:hover {
     cursor: pointer;
     background-color: var(--dark-grayish-cyan-2);
     opacity: 1; filter: brightness(1.5);
+}
+
+@media screen and (max-width: 1250px) {
+    .container {
+        height: 110vh;
+    }
+
+    main {
+        width: 80%;
+        height: 70rem;
+    }
+
+    .content-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        height: 108vh;
+    }
+
+    main {
+        width: 100%;
+        height: 60rem;
+    }
+
+    .title-container {
+        transform: translateY(3rem);
+    }
+
+    .content-container {
+        flex-direction: column;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .info-container {
+        height: 22.5rem;
+    }
+
+    .select-container {
+        height: 14.5rem;
+        display: flex; flex-direction: column;
+        justify-content: center;
+    }
+
+    .tip-percent-container {
+        margin-top: 1rem;
+        grid-template-areas: 
+            'b5 b10'
+            'b15 b25'
+            'b50 custom';
+        height: 9.5rem;
+    }
+
+    .btn, .tip-percent-container input[type="number"] {
+        width: calc(20rem / 2);
+    }
+
+    .output-container {
+        height: 15rem;
+        width: 95%;
+    }
+
+    .output-center {
+        height: 13rem;
+    }
+
+    .btnReset {
+        margin-top: 2rem;
+    }
 }

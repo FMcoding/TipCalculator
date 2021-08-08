@@ -58,9 +58,10 @@ function perT6() {
 $(document).click(function() {
     if (people == 0) {
         $(".input-container-people").css("box-shadow", "0 0 0 2px red");
+        $("#zero").css("visibility", "visible");
     } else {
-        $(".input-container-people").css("box-shadow", "");
-
+        $(".input-container-people").css("box-shadow", "");     
+        $("#zero").css("visibility", "hidden");
     }
 
     if (percent != null && totalBill != null && people != null) {
